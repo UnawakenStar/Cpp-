@@ -1,12 +1,5 @@
 #include<stdio.h>
-void sum(int begin, int end){
-	int i;
-	int sum = 0;
-	for(i=begin;i<=end;i++){
-		sum+=i;
-	} 
-	printf("%d到%d的和是%d\n",begin, end, sum);
-}
+void sum(int begin, int end);//声明 
 
 int main(void){
 	sum(1,10);
@@ -15,3 +8,12 @@ int main(void){
 	
 	return 0;
 }
+void sum(int begin, int end){//定义 
+	int i;
+	int sum = 0;
+	for(i=begin;i<=end;i++){
+		sum+=i;
+	} 
+	printf("%d到%d的和是%d\n",begin, end, sum);
+}
+//会判断声明和定义是否一致（都是void） 

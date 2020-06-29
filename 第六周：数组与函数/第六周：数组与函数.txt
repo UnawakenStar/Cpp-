@@ -72,3 +72,24 @@ return不一定只有一个，但是不符合单一变量的原则
 void函数名（参数表）
 不能使用带值的return也可以直接不写return
 调用的时候不能做返回的赋值。
+
+函数的参数与变量：
+函数先后关系：例如在程序
+#include<stdio.h>
+void sum(int begin, int end){
+	int i;
+	int sum = 0;
+	for(i=begin;i<=end;i++){
+		sum+=i;
+	} 
+	printf("%d到%d的和是%d\n",begin, end, sum);
+}
+
+int main(void){
+	sum(1,10);
+	sum(20,30);
+	sum(35,45);
+	
+	return 0;
+}
+中把sum()函数写在上面，是因为：C的编译器自上而下顺序分析代码
